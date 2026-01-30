@@ -18,9 +18,12 @@ export default function Index() {
 
         <div className="container mx-auto max-w-7xl px-4 py-16 md:py-24 relative z-10">
           <div className="max-w-3xl mx-auto text-center animate-slide-down">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-primary via-white to-secondary bg-clip-text text-transparent mb-6">
-              Your Wellness, Our Mission
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-green-400 via-emerald-500 to-green-600 bg-clip-text text-transparent mb-6">
+              Sentinel Soul
             </h1>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-primary via-white to-secondary bg-clip-text text-transparent mb-6">
+              Your Wellness, Our Mission
+            </h2>
             <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
               AI-powered emotional intelligence that detects when students need
               support and connects them with compassionate counselors in

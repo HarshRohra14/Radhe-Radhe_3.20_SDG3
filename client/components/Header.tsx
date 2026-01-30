@@ -11,11 +11,11 @@ export function Header() {
             className="flex items-center gap-2 hover:opacity-80 transition-opacity"
           >
             <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white font-bold text-lg">
-              W
+              <img className="rounded-full" src="https://imgs.search.brave.com/Oh879n3dA9C9nAuSEvwP8Cg5H2nW2OPT9jReNQnCWN4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/aWNvbnM4LmNvbS9n/bHlwaC1uZXVlLzEy/MDAvbWVkaXRhdGlv/bi1ndXJ1LmpwZw" alt="" />
             </div>
             <div className="flex flex-col">
               <span className="font-bold text-foreground text-sm">
-                Wellness
+                Sentinel Soul
               </span>
               <span className="text-xs text-muted-foreground">Coach AI</span>
             </div>
