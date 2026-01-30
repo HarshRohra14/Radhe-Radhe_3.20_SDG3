@@ -86,7 +86,9 @@ export function RiskAlert({
           </div>
           <div>
             <h3 className="font-semibold text-foreground">{title}</h3>
-            <p className="text-xs text-muted-foreground mt-0.5">{description}</p>
+            <p className="text-xs text-muted-foreground mt-0.5">
+              {description}
+            </p>
           </div>
         </div>
         <div
@@ -102,7 +104,9 @@ export function RiskAlert({
           <span className="text-xs font-medium text-muted-foreground">
             Risk Probability
           </span>
-          <span className={`text-sm font-bold ${config.color}`}>{probability}%</span>
+          <span className={`text-sm font-bold ${config.color}`}>
+            {probability}%
+          </span>
         </div>
         <div className="w-full h-2 bg-background/50 rounded-full overflow-hidden border border-white/10">
           <div

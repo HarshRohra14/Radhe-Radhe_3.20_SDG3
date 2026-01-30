@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react";
 
-type TrackingStatus = "detected" | "notified" | "responding" | "delivered" | "followup";
+type TrackingStatus =
+  | "detected"
+  | "notified"
+  | "responding"
+  | "delivered"
+  | "followup";
 
 interface TrackingStep {
   id: TrackingStatus;
@@ -75,13 +80,15 @@ export function SupportTracking({
                   {/* Content */}
                   <div className="flex-1 pt-1">
                     <div className="flex items-center gap-2 mb-1">
-                      <h4 className={`font-semibold transition-colors ${
-                        isCurrent
-                          ? "text-primary"
-                          : isCompleted
-                            ? "text-foreground"
-                            : "text-muted-foreground"
-                      }`}>
+                      <h4
+                        className={`font-semibold transition-colors ${
+                          isCurrent
+                            ? "text-primary"
+                            : isCompleted
+                              ? "text-foreground"
+                              : "text-muted-foreground"
+                        }`}
+                      >
                         {step.label}
                       </h4>
                       {isCurrent && (
@@ -110,10 +117,13 @@ export function SupportTracking({
       <div className="bg-gradient-to-r from-blue-950/30 to-red-950/20 border border-blue-800/30 rounded-lg p-4 flex items-start gap-3">
         <div className="text-2xl flex-shrink-0">📮</div>
         <div className="text-xs text-muted-foreground">
-          <p className="font-semibold text-foreground mb-1">Trusted Delivery of Support</p>
+          <p className="font-semibold text-foreground mb-1">
+            Trusted Delivery of Support
+          </p>
           <p>
-            Your support request is tracked and delivered with USPS-grade security and reliability. 
-            We ensure every step of the support process is transparent and timely.
+            Your support request is tracked and delivered with USPS-grade
+            security and reliability. We ensure every step of the support
+            process is transparent and timely.
           </p>
         </div>
       </div>

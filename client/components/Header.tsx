@@ -6,12 +6,17 @@ export function Header() {
       <div className="container mx-auto max-w-7xl px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+          <Link
+            to="/"
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+          >
             <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white font-bold text-lg">
               W
             </div>
             <div className="flex flex-col">
-              <span className="font-bold text-foreground text-sm">Wellness</span>
+              <span className="font-bold text-foreground text-sm">
+                Wellness
+              </span>
               <span className="text-xs text-muted-foreground">Coach AI</span>
             </div>
           </Link>

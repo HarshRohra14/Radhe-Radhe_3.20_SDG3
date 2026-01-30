@@ -1,4 +1,13 @@
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from "recharts";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+  Cell,
+} from "recharts";
 
 interface HeatmapData {
   emotion: string;
@@ -41,7 +50,10 @@ export function EmotionalHeatmap({
       <div className="glass rounded-2xl p-6">
         <ResponsiveContainer width="100%" height={250}>
           <BarChart data={data}>
-            <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
+            <CartesianGrid
+              strokeDasharray="3 3"
+              stroke="rgba(255,255,255,0.1)"
+            />
             <XAxis
               dataKey="emotion"
               stroke="rgba(255,255,255,0.5)"
@@ -83,8 +95,12 @@ export function EmotionalHeatmap({
               className="w-3 h-3 rounded-full mx-auto mb-2"
               style={{ backgroundColor: getEmotionColor(item.emotion) }}
             />
-            <p className="text-xs font-medium text-foreground">{item.emotion}</p>
-            <p className="text-xs text-muted-foreground mt-0.5">{item.percentage}%</p>
+            <p className="text-xs font-medium text-foreground">
+              {item.emotion}
+            </p>
+            <p className="text-xs text-muted-foreground mt-0.5">
+              {item.percentage}%
+            </p>
           </div>
         ))}
       </div>
@@ -94,7 +110,8 @@ export function EmotionalHeatmap({
         <div className="text-secondary text-lg flex-shrink-0">🔒</div>
         <div className="text-xs text-muted-foreground">
           <strong>Privacy-Protected:</strong> Data is aggregated and anonymized.
-          Individual student identities are never displayed in district-wide analytics.
+          Individual student identities are never displayed in district-wide
+          analytics.
         </div>
       </div>
     </div>

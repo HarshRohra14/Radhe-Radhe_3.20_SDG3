@@ -74,7 +74,10 @@ export function WellnessScore({
             strokeDasharray={circumference}
             strokeDashoffset={offset}
             className="transition-all duration-500"
-            style={{ transform: "rotate(-90deg)", transformOrigin: "60px 60px" }}
+            style={{
+              transform: "rotate(-90deg)",
+              transformOrigin: "60px 60px",
+            }}
           />
           <defs>
             <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -89,7 +92,9 @@ export function WellnessScore({
           <div className={`text-4xl font-bold ${getColor(displayScore)}`}>
             {Math.round(displayScore)}
           </div>
-          <div className="text-xs text-muted-foreground mt-1">Wellness Score</div>
+          <div className="text-xs text-muted-foreground mt-1">
+            Wellness Score
+          </div>
         </div>
       </div>
 

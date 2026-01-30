@@ -27,7 +27,9 @@ export function MoodTrend({
   period = "week",
   onPeriodChange,
 }: MoodTrendProps) {
-  const [selectedPeriod, setSelectedPeriod] = useState<"week" | "month">(period);
+  const [selectedPeriod, setSelectedPeriod] = useState<"week" | "month">(
+    period,
+  );
 
   const handlePeriodChange = (newPeriod: "week" | "month") => {
     setSelectedPeriod(newPeriod);
@@ -73,7 +75,10 @@ export function MoodTrend({
                 <stop offset="95%" stopColor="#06b6d4" stopOpacity={0.1} />
               </linearGradient>
             </defs>
-            <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
+            <CartesianGrid
+              strokeDasharray="3 3"
+              stroke="rgba(255,255,255,0.1)"
+            />
             <XAxis
               dataKey="date"
               stroke="rgba(255,255,255,0.5)"
