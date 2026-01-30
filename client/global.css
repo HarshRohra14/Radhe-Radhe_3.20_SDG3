@@ -1,5 +1,5 @@
 /** @import must precede all other statements */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -7,94 +7,110 @@
 
 @layer base {
   /**
-   * Tailwind CSS theme
+   * Tailwind CSS theme - Modern Gen-Z + Professional Fusion
+   * Dark mode first with glassmorphism and neon accents
    * tailwind.config.ts expects the following color variables to be expressed as HSL values.
-   * A different format will require also updating the theme in tailwind.config.ts.
   */
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Background & Foreground */
+    --background: 250 20% 8%;
+    --foreground: 250 10% 92%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Cards with glassmorphic feel */
+    --card: 250 15% 12%;
+    --card-foreground: 250 10% 92%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* Popover */
+    --popover: 250 15% 10%;
+    --popover-foreground: 250 10% 92%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Purple accent */
+    --primary: 280 85% 50%;
+    --primary-foreground: 250 10% 95%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Cyan accent */
+    --secondary: 188 95% 50%;
+    --secondary-foreground: 250 20% 8%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted - Subtle text */
+    --muted: 250 10% 35%;
+    --muted-foreground: 250 10% 70%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Electric blue */
+    --accent: 200 100% 50%;
+    --accent-foreground: 250 20% 8%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Destructive/Risk - Red with purple tint for crisis */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 250 10% 95%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Border & Input */
+    --border: 250 15% 20%;
+    --input: 250 15% 18%;
+    --ring: 280 85% 50%;
 
-    --radius: 0.5rem;
+    --radius: 1rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Sidebar for admin panel */
+    --sidebar-background: 250 15% 12%;
+    --sidebar-foreground: 250 10% 85%;
+    --sidebar-primary: 280 85% 50%;
+    --sidebar-primary-foreground: 250 10% 95%;
+    --sidebar-accent: 188 95% 50%;
+    --sidebar-accent-foreground: 250 20% 8%;
+    --sidebar-border: 250 15% 20%;
+    --sidebar-ring: 280 85% 50%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Wellness specific colors */
+    --wellness-healthy: 120 100% 50%;
+    --wellness-moderate: 40 100% 50%;
+    --wellness-warning: 30 100% 55%;
+    --wellness-critical: 0 84% 60%;
+    --wellness-neutral: 250 10% 45%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Already in dark mode by default */
+  }
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+  /* Light mode support (optional) */
+  .light {
+    --background: 250 10% 98%;
+    --foreground: 250 20% 8%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 250 20% 8%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 250 20% 8%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --primary: 280 85% 50%;
+    --primary-foreground: 0 0% 100%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --secondary: 188 95% 50%;
+    --secondary-foreground: 0 0% 100%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --muted: 250 10% 92%;
+    --muted-foreground: 250 10% 35%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --accent: 200 100% 50%;
+    --accent-foreground: 0 0% 100%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 250 10% 90%;
+    --input: 250 10% 92%;
+    --ring: 280 85% 50%;
+
+    --sidebar-background: 250 10% 96%;
+    --sidebar-foreground: 250 20% 8%;
+    --sidebar-primary: 280 85% 50%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 188 95% 50%;
+    --sidebar-accent-foreground: 250 20% 8%;
+    --sidebar-border: 250 10% 90%;
+    --sidebar-ring: 280 85% 50%;
   }
 }
 
@@ -103,11 +119,33 @@
     @apply border-border;
   }
 
-  body {
-    @apply bg-background text-foreground;
+  html {
+    @apply scroll-smooth;
   }
 
-  :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Space Grotesk", sans-serif;
+    @apply font-semibold;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl tracking-tight;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl tracking-tight;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl tracking-tight;
+  }
+
+  :where(p, span, li, a, button, label, td, th) {
     overflow-wrap: anywhere;
     word-break: break-word;
   }
@@ -116,5 +154,115 @@
   code {
     overflow-x: auto;
     white-space: pre;
+  }
+}
+
+/* Glassmorphism effect utility */
+@layer components {
+  .glass {
+    @apply bg-background/30 backdrop-blur-md border border-white/10;
+  }
+
+  .glass-primary {
+    @apply bg-primary/10 backdrop-blur-md border border-primary/20;
+  }
+
+  .glass-secondary {
+    @apply bg-secondary/10 backdrop-blur-md border border-secondary/20;
+  }
+
+  /* Glow effects for interactive elements */
+  .glow-primary {
+    @apply shadow-[0_0_20px_rgba(168,85,247,0.3)];
+  }
+
+  .glow-secondary {
+    @apply shadow-[0_0_20px_rgba(6,182,212,0.3)];
+  }
+
+  .glow-accent {
+    @apply shadow-[0_0_20px_rgba(59,130,246,0.3)];
+  }
+
+  /* Smooth transitions */
+  .transition-smooth {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  /* Neumorphism-inspired button effect */
+  .neumorph {
+    @apply shadow-[8px_8px_16px_rgba(0,0,0,0.4),-8px_-8px_16px_rgba(255,255,255,0.1)];
+  }
+}
+
+/* Smooth animations */
+@layer utilities {
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.8;
+    }
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-down {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.5s ease-out;
+  }
+
+  .animate-slide-down {
+    animation: slide-down 0.5s ease-out;
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.5s ease-out;
   }
 }
